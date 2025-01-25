@@ -1,0 +1,98 @@
+/* Base container styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121111; /* Light gray background */
+}
+
+/* Main content and sidebar layout */
+.content-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; /* Default sidebar width for desktops */
+  background: #222;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0; /* Prevent shrinking of the sidebar */
+  transition: all 0.3s ease; /* Smooth transitions for width changes */
+}
+
+/* Main content styling */
+.main-content {
+  flex-grow: 1;
+  background: #060606;
+  padding: 20px;
+  overflow: auto;
+}
+
+/* Responsive design: Smaller laptops and tablets */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Slightly smaller sidebar for laptops */
+    padding: 15px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}
+
+/* Responsive design: Tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack the sidebar above the main content */
+  }
+
+  .sidebar {
+    padding: 15px;
+    text-align: center; /* Center the sidebar content */
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}
+
+/* Responsive design: Mobile devices */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    padding: 10px;
+    font-size: 14px; /* Smaller font size for sidebar content */
+  }
+
+  .main-content {
+    padding: 10px;
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+}
+
+/* Optional: Add a collapsible sidebar for extra responsiveness */
+@media screen and (max-width: 768px) {
+  .sidebar {
+   
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .sidebar.active {
+    display: block;
+    width: 100%;
+  }
+}

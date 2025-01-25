@@ -1,0 +1,338 @@
+/* Sidebar Container */
+.sidebar {
+  width: 240px;
+  background: #2b2a2a;
+  color: #ffffff;
+  height: 100vh; /* Full height of the viewport */
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push footer to bottom */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+  z-index: 10; /* Ensure sidebar is above other elements */
+}
+
+.sidebar.closed {
+  width: 60px; /* Sidebar width when closed */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.sidebar .toggle-btn {
+  background: #facc15;
+  border: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20; /* Ensure toggle button is above other elements */
+}
+
+.sidebar-content {
+  margin-bottom: 50px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.closed .sidebar-content {
+  opacity: 0; /* Hide content when sidebar is closed */
+}
+
+.sidebar-header h2 {
+  font-size: 16px;
+  margin: 0;
+  padding: 5px 0;
+}
+
+
+
+.headown {
+  background: #26adfc;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Vertically centers the content */
+}
+
+.headown:hover {
+  background: #79caf3;
+  transition: background 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full-width sidebar on smaller screens */
+  }
+
+  .sidebar.closed {
+    width: 0;
+    overflow: hidden; /* Completely hide the sidebar when closed */
+  }
+}
+
+  
+  /* Header Section */
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    background-color: #5a3fe0;
+  }
+
+  
+  .sidebar-header h2 {
+    color: #ffffff;
+    margin-top: 6px;
+  }
+  
+  .sidebar-header p {
+    color: #a0aec0;
+    margin: 0;
+  }
+  
+  /* Create Button */
+  .create-btn {
+    background: #0f0731;
+    color: rgb(254, 55, 108);
+    border: 1px solid #327dfe;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .create-btn:hover {
+    box-shadow: 0 5px 15px rgba(50, 125, 254, 0.5);
+  }
+
+  .brain{
+    background: #0f0731;
+    outline:1px solid #327dfe ;
+    border-radius: 5px;
+  }
+
+  .brain:hover{
+    box-shadow: 0 5px 15px rgba(50, 125, 254, 0.5);
+  }
+
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 8px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Vertically center the icon and text */
+    justify-content:flex-start; /* Push icon and text to opposite sides */
+    gap: 10px;
+    transition: background 0.2s ease;
+  }
+
+  .sidebar-menu li .menu-item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .sidebar-menu li .fa-square-check,
+.sidebar-menu li .fa-users,
+.sidebar-menu li .fa-shop,
+.sidebar-menu li .fa-bell,
+.sidebar-menu li .fa-medal,
+.sidebar-menu li .fa-gear,
+.sidebar-menu li .fa-youtube,
+.sidebar-menu li .fa-headset,
+.sidebar-menu li .fa-computer,
+.sidebar-menu li .fa-right-from-bracket,
+.sidebar-menu li .fa-user,
+.sidebar-menu li .fa-book {
+  color: #3296e9; /* Small space between icon and text */
+}
+
+  .sidebar-menu li .fa-lock {
+    margin-left: auto;
+    font-size: 10px; /* Adjust size of lock icon if needed */
+  }
+  
+  .sidebar-menu li:hover {
+    background: #1e293b;
+    border-radius: 5px;
+  }
+
+  .spann{
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 10px ;
+  }
+  
+  .highlight {
+    color: #facc15;
+    font-weight: bold;
+  }
+  
+  /* Footer Section */
+  
+  
+  .sidebar-footer p {
+    font-size: 13px;
+    color: white;
+    margin: 3px 0;
+  }
+  
+  .sidebar-footer h3 {
+    color: #7d5fff;
+    margin: 10px 0;
+  }
+  
+  .upgrade-btn {
+    background: #facc15;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Vertically centers the content */
+  }
+  .upgrade-btn .fa-circle-up {
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  
+  
+  .upgrade-btn:hover {
+    background: #eab308;
+  }
+  
+
+  
+  .refer-text {
+  display: flex; /* Use Flexbox to align items side by side */
+  align-items: center; /* Vertically align the icons with text */
+  gap: 18px; /* Space between icons and text */
+  line-height: 1.2;
+  }
+
+  .headown .fa-gift {
+    margin-left: 10px; 
+    margin-right: 15px;/* Adds space to the right of the gift icon */
+    color: #efe555;
+    font-size: 16px;
+  }
+  
+  .headown .fa-arrow-right{
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  
+  .slist1{
+    background-color: #454545;
+    border-radius: 6px;
+  }
+
+  .slist1 h3{
+    padding: 5px;
+    margin: 5px ;
+  }
+
+  .slist1 h3:hover{
+    cursor: pointer;
+  }
+
+  /* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Slightly smaller sidebar on medium devices */
+  }
+
+  .sidebar.closed {
+    width: 50px;
+  }
+
+  .sidebar-header h2 {
+    font-size: 14px; /* Reduce header font size */
+  }
+
+  .sidebar-menu li {
+    font-size: 12px; /* Adjust menu item font size */
+  }
+
+  .upgrade-btn {
+    font-size: 12px; /* Adjust button font size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full-width sidebar on smaller screens */
+    height: auto;
+    position: fixed; /* Position fixed for mobile-friendly sliding menu */
+  }
+
+  .sidebar.closed {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .sidebar-header h2 {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .sidebar-menu li {
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 100%; /* Full-width for mobile devices */
+    padding: 10px;
+  }
+
+  .sidebar.closed {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .sidebar-header {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .sidebar-menu li {
+    font-size: 12px;
+    padding: 8px 5px;
+  }
+
+  .upgrade-btn {
+    font-size: 10px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,24 @@
+.header{
+    width: 100%;
+    margin: 0;
+    background-color:#2b2a2a;
+    color:white;
+    padding: 20px 60px;
+}
+
+.header .toggle-btn {
+    background: #facc15;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20; /* Ensure toggle button is above other elements */
+  }

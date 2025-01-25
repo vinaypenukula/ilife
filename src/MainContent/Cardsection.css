@@ -1,0 +1,195 @@
+/* Base Styles for Cards Section */
+.cards-section {
+  padding: 20px;
+  background: #060606;
+  color: #bbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Full width for the container */
+}
+
+.created1 {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Card Layout */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 70vh;
+  height: 20vh;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.card-icon {
+  flex: 0 0 80px; /* Fixed width for the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Set relative for positioning child elements */
+  margin-right: 20px;
+  flex-direction: column; /* Stack image and pencil vertically */
+}
+
+.card-icon img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  background: #444;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  flex: 1; /* Take up remaining space */
+}
+
+.card-header h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #48c8ef;
+}
+
+.card-header p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.card-body p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: rgb(249, 4, 4);
+}
+
+.play-btn,
+.delete-btn {
+  background: #327dfe;
+  color: white;
+}
+
+/* Edit Pencil Style */
+.card-icon .edit-pencil {
+  position: absolute;
+  bottom: -10px; /* Move below the image */
+  right: 0px; /* Align to the right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: #63d2f1;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Responsive Design */
+
+/* Medium Screens: Tablets and Smaller Laptops */
+@media screen and (max-width: 1024px) {
+  .card {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Auto height for content */
+    padding: 15px;
+  }
+
+  .card-icon {
+    margin-right: 0; /* Remove unnecessary spacing */
+    margin-bottom: 10px; /* Add spacing below the icon */
+  }
+
+  .card-actions {
+    flex-direction: row; /* Horizontal buttons */
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%; /* Align actions to the container width */
+  }
+}
+
+/* Small Screens: Mobile Devices */
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content for mobile */
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Adjust height to fit content */
+    padding: 10px;
+  }
+
+  .card-icon img {
+    width: 60px; /* Reduce image size */
+    height: 50px;
+  }
+
+  .card-header h3 {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .card-header p,
+  .card-body p {
+    font-size: 12px; /* Reduce text size for smaller screens */
+  }
+
+  .card-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px;
+    width: 100%; /* Ensure buttons take full width */
+  }
+
+  .card-actions button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px 12px; /* Smaller padding for buttons */
+  }
+}
+
+/* Extra Small Screens: Very Narrow Devices */
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 8px;
+  }
+
+  .card-icon img {
+    width: 50px; /* Further reduce image size */
+    height: 40px;
+  }
+
+  .card-header h3 {
+    font-size: 14px; /* Smaller header size */
+  }
+
+  .card-actions button {
+    font-size: 12px; /* Further reduce button font size */
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,135 @@
+/* Base Styling for Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start; /* Ensure content starts from the top */
+  width: 100%; /* Full width to avoid any unnecessary spacing */
+}
+
+/* Left and Right Sections */
+.left-section, .right-section {
+  flex: 1; /* Ensures both sections take up equal space */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in total width/height */
+}
+
+/* Divider between sections */
+.divider {
+  width: 1px;
+  background: #ccc;
+  margin: 0 20px;
+  height: 100%; /* Ensures it spans the parent's height */
+ 
+  top: 0; /* Attaches to the top */
+  bottom: 0; /* Attaches to the bottom */
+}
+
+
+/* Right Section Layout */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Tabs Container */
+.tabs, .tabs1 {
+  display: flex;
+  justify-content: center; /* Center tabs horizontally */
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+ 
+  padding: 5px 15px;
+  border-radius: 50px;
+  width: 42vh; /* Define the width of the tabs container */
+  margin: 20px auto; /* Center the tabs horizontally */
+}
+
+/* Tab Buttons */
+.tab-btn, .tab-btn1 {
+  background: #444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Active Tab State */
+.tab-btn.active, .tab-btn1.active1 {
+  background: #f0a500;
+  color: black;
+}
+
+/* Responsive Design */
+
+/* Medium Screens: Tablets and Smaller Laptops */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    flex-direction: column; /* Stack the sections */
+    align-items: center;
+    padding: 15px;
+  }
+
+  .divider {
+    display: none; /* Hide the divider on smaller screens */
+  }
+
+  .left-section, .right-section {
+    width: 100%; /* Full width for stacked layout */
+    padding: 15px;
+  }
+
+  .tabs, .tabs1 {
+  
+    max-width: 600px; /* Prevent tabs from becoming too wide */
+  }
+
+  .tab-btn, .tab-btn1 {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px 16px;
+  }
+}
+
+/* Small Screens: Mobile Devices */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .tabs, .tabs1 {
+    gap: 5px; /* Reduce gap between buttons */
+    padding: 5px 10px;
+  }
+
+  .tab-btn, .tab-btn1 {
+    font-size: 14px;
+    padding: 6px 12px; /* Adjust padding for smaller buttons */
+  }
+}
+
+/* Extra Small Screens: Very Narrow Devices */
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 8px;
+  }
+
+  .tabs, .tabs1 {
+    flex-wrap: wrap; /* Allow wrapping of buttons */
+    gap: 5px; /* Reduce spacing further */
+    padding: 5px;
+  }
+
+  .tab-btn, .tab-btn1 {
+    font-size: 12px;
+    padding: 5px 10px; /* Smaller padding for buttons */
+  }
+
+  .left-section, .right-section {
+    padding: 10px;
+  }
+}

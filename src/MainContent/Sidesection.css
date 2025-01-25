@@ -1,0 +1,225 @@
+/* Side Section Styles */
+.side-section {
+  padding: 20px;
+  background: #0d0d0d;
+  color: white;
+  border-radius: 10px;
+}
+
+.side-section p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Options Grid */
+.options {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 10px;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.option-btn:hover {
+  background: #555; /* Slight hover effect */
+}
+
+/* Side Actions */
+.side-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exit-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.exit-btn {
+  background: #d11a2a;
+  color: white;
+  border-radius: 50px;
+}
+
+.exit-btn:hover {
+  background: #b11222; /* Hover effect for exit button */
+}
+
+.submit-btn {
+  background: #327dfe;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #285fcf; /* Hover effect for submit button */
+}
+
+/* Input Wrapper */
+.input-wrapper {
+  background-color: #444;
+  border-radius: 50px;
+  height: 2.5rem;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 100px;
+}
+
+.input-wrapper p {
+  color: #999191;
+  margin-top: 20px;
+}
+
+/* Options Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.option-box1 {
+  background-color: #718bf2;
+}
+
+.option-box2 {
+  background-color: #f93653;
+}
+
+.option-box3 {
+  background-color: #14f8e9;
+}
+
+.option-box4 {
+  background-color: #75b1f5;
+}
+
+.option-box {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  color: white;
+  height: 20vh; /* Adjust as needed */
+}
+
+.projectImg {
+  width: 60%; /* Increased the width */
+  max-width: 70%; /* Ensures it doesn't exceed the card */
+  height: 12vh;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.option-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Responsive Design */
+
+/* Medium Screens: Tablets and Smaller Laptops */
+@media screen and (max-width: 1024px) {
+  .options {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .option-box {
+    height: auto; /* Adjust height to fit content */
+    padding: 15px;
+  }
+
+  .projectImg {
+    width: 50%; /* Slightly smaller images */
+    height: auto;
+  }
+}
+
+/* Small Screens: Mobile Devices */
+@media screen and (max-width: 768px) {
+  .side-section {
+    padding: 15px;
+  }
+
+  .options-grid {
+    gap: 15px; /* Reduce spacing between grid items */
+  }
+
+  .option-box {
+    padding: 10px;
+  }
+
+  .projectImg {
+    width: 40%; /* Further reduce image size */
+  }
+
+  .input-wrapper {
+    height: 2rem; /* Reduce height */
+  }
+
+  input {
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .option-box p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .exit-btn,
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 8px 15px; /* Adjust padding */
+  }
+}
+
+/* Extra Small Screens: Very Narrow Devices */
+@media screen and (max-width: 480px) {
+  .options-grid {
+    grid-template-columns: 1fr; /* Stack options vertically */
+    gap: 10px; /* Reduce spacing */
+  }
+
+  .option-box {
+    padding: 10px;
+  }
+
+  .projectImg {
+    width: 30%; /* Further reduce image size */
+  }
+
+  .exit-btn,
+  .submit-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px; /* Reduce padding */
+  }
+}
